@@ -42,11 +42,11 @@ IV<- function(matrix.M, IV.bootstrap= FALSE, n.sample= 999, scale= TRUE){
             }
             
             
-            IVs.result.boot<- matrix(nrow = n.sample, ncol= ncol(matrix.M), byrow = FALSE)
+            IVs.result.boot<- matrix(nrow = n.sample, ncol= ncol(matrix.M), byrow = TRUE)
             for(i in 1:length(metric.sqrt.corr.boot)){
                 metric.sqrt.corr.boot[[i]] 
                 for(j in 1:ncol(matrix.M)){
-                   IV.result.boot[i,j]<- metric.sqrt.corr.boot[[i]][j,] %*% as.matrix(prop.var.boot[[j]])
+                   IV.result.boot[i,j]<- metric.sqrt.corr.boot[[i]][j,] %*% as.matrix(prop.var.boot[[i]])
                 }
             }        
             
@@ -85,11 +85,11 @@ IV<- function(matrix.M, IV.bootstrap= FALSE, n.sample= 999, scale= TRUE){
             }
             
             
-            IVs.result.boot<- matrix(nrow = n.sample, ncol= ncol(matrix.M), byrow = FALSE)
+            IVs.result.boot<- matrix(nrow = n.sample, ncol= ncol(matrix.M), byrow = TRUE)
             for(i in 1:length(metric.sqrt.corr.boot)){
                 metric.sqrt.corr.boot[[i]] 
                 for(j in 1:ncol(matrix.M)){
-                    IV.result.boot[i,j]<- metric.sqrt.corr.boot[[i]][j,] %*% as.matrix(prop.var.boot[[j]])
+                    IV.result.boot[i,j]<- metric.sqrt.corr.boot[[i]][j,] %*% as.matrix(prop.var.boot[[i]])
                 }
             }        
             
