@@ -1,4 +1,4 @@
-IV<- function(matrix.M, IV.bootstrap= FALSE, n.sample= 999, scale= TRUE){
+IV<- function(matrix.M, IV.bootstrap= FALSE, n.sample= 999, scale= TRUE, method= "max"){
     library(vegan)
     if(is.matrix(matrix.M) == FALSE){
         matrix.M<- as.matrix(matrix.M)
@@ -10,7 +10,7 @@ IV<- function(matrix.M, IV.bootstrap= FALSE, n.sample= 999, scale= TRUE){
         }
     } 
         
-    matrix.M.stand<-decostand(x = matrix.M, method = "standardize", MARGIN = 2)[1:nrow(matrix.M),]
+    matrix.M.stand<-decostand(x = matrix.M, method = method, MARGIN = 2)[1:nrow(matrix.M),]
     
     if(scale == TRUE){
         metric.sqrt.corr<- (prcomp(x = matrix.M.stand, scale.= FALSE)$rotation ^ 2)
