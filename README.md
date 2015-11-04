@@ -12,6 +12,8 @@ n.sample= number of bootstrap samples to be carried out with matrix.M;
 
 scale= logical argument, if TRUE the matrix.M will be standardized to zero mean and unit variance, if FALSE no standardization is performed;
 
+method= If scale= TRUE, method correspond to the type of standardization imposed to matrix.M before calculation of IVs. The arguments to be used are the same to be passed  to the argument method in function decostand() in vegan. Default argument is "max", where the metrics are standardized by their respective maximum value observed between communities.
+
 output:
 
 list with length two containing observed and bootstrap IVs of components of diversity present in matrix.M
