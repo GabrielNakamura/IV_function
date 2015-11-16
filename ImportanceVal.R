@@ -25,7 +25,7 @@ ImportanceVal<- function(matrix.M, IV.bootstrap= FALSE, n.sample= 999, scale= TR
             names.matrix.IV<- list("IV.resu", colnames(matrix.M))
             IVs.result.sig<- matrix(nrow= 1, ncol= ncol(matrix.M), dimnames= names.matrix.IV)
             for(i in 1:nrow(as.matrix(metric.sqrt.corr.sig))){
-                IVs.result.sig[,i]<- as.matrix(as.matrix(metric.sqrt.corr.sig)[i,]) %*% as.matrix(prop.var.sig)
+                IVs.result.sig[,i]<- as.matrix(metric.sqrt.corr.sig)[i,] %*% as.matrix(prop.var.sig)
             }
         }
         if(IV.bootstrap == FALSE){
@@ -92,7 +92,7 @@ ImportanceVal<- function(matrix.M, IV.bootstrap= FALSE, n.sample= 999, scale= TR
             names.matrix.IV<- list("IV.resu", colnames(matrix.M))
             IVs.result.sig<- matrix(nrow= 1, ncol= ncol(matrix.M), dimnames= names.matrix.IV)
             for(i in 1:nrow(as.matrix(metric.sqrt.corr.sig))){
-                IVs.result.sig[,i]<- as.matrix(as.matrix(metric.sqrt.corr.sig)[i,]) %*% as.matrix(prop.var.sig)
+                IVs.result.sig[,i]<- as.matrix(metric.sqrt.corr.sig)[i,] %*% as.matrix(prop.var.sig)
             }
         }
         if(IV.bootstrap == FALSE){
