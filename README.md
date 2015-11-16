@@ -14,6 +14,8 @@ scale= logical argument, if TRUE the matrix.M will be standardized to zero mean 
 
 method= If scale= TRUE, method correspond to the type of standardization imposed to matrix.M before calculation of IVs. The arguments to be used are the same to be passed  to the argument method in function decostand() in vegan. Default argument is "max", where the metrics are standardized by their respective maximum value observed between communities.
 
+stopRule= logical, if TRUE the Importance Values of dimensions will be calculated using only significant axes according to Kaiser-Guttman criterion. Default values is TRUE.  
+
 output:
 
-list with length two containing observed and bootstrap IVs of components of diversity present in matrix.M
+list with length two containing observed and bootstrap IVs of components of diversity present in matrix.M. If the option bootstrap= FALSE, the function will return a matrix with one row and column number equal to the number of columns in matrix M.
