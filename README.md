@@ -1,5 +1,5 @@
-# IV_function
-Function to compute Importance Values (adapted from [Willig et al. 2005](http://www.esajournals.org/doi/abs/10.1890/04-0394)), with bootstrap procedure
+# IV_function - under construction and new implementation from original version
+Function to compute Importance Values (adapted from [Willig et al. 2005](http://www.esajournals.org/doi/abs/10.1890/04-0394)), with bootstrap procedure 
 
 # arguments
 inputs:
