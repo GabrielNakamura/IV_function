@@ -1,4 +1,4 @@
-# IV_function - under construction, new implementation from original version
+# IV_function ImportanceVal_V2.R - under construction, new implementation from original version
 Function to compute Importance Values (adapted from [Willig et al. 2005](http://www.esajournals.org/doi/abs/10.1890/04-0394)), with bootstrap procedure 
 
 # arguments
