@@ -1,3 +1,4 @@
+#original function
 ImportanceVal<- function(matrix.M, scale= TRUE, method= "standardize", stopRule= TRUE){
   if(is.matrix(matrix.M) == FALSE){
     matrix.M<- as.matrix(matrix.M)
