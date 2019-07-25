@@ -1,4 +1,4 @@
-ImportanceVal<- function(matrix.M, scale= TRUE, method= "standardize", stopRule= TRUE){
+ImportanceVal<- function(matrix.M, scale= TRUE, method= "max", stopRule= TRUE){
   if(is.matrix(matrix.M) == FALSE){
     matrix.M<- as.matrix(matrix.M)
     if(ncol(matrix.M)<3){
