@@ -1,14 +1,10 @@
 # IV_function
-Function to compute Importance Values (adapted from [Willig et al. 2005](http://www.esajournals.org/doi/abs/10.1890/04-0394)).
+Function to compute Importance Values (IV) (adapted from [Willig et al. 2005](http://www.esajournals.org/doi/abs/10.1890/04-0394)).
 
 # arguments
 inputs:
 
 matrix.M= a matrix with communities in rows and values of metrics in columns; 
-
-IV.bootstrap= logical argument, if TRUE the function will compute bootstrap values of IV for matrix.M, if FALSE the function will compute only observed values;
-
-n.sample= number of bootstrap samples to be carried out with matrix.M;
 
 scale= logical argument, if TRUE the matrix.M will be standardized to zero mean and unit variance, if FALSE no standardization is performed;
 
@@ -18,4 +14,4 @@ stopRule= logical, if TRUE the Importance Values of dimensions will be calculate
 
 output:
 
-list with length two containing observed and bootstrap IVs of components of diversity present in matrix.M. If the option bootstrap= FALSE, the function will return a matrix with one row and column number equal to the number of columns in matrix M.
+list with length three, containing observed IVs in IV.obs_stopRule element, the proportion of variation accounted by each significant PCs in Var.by.axis element and the squared correlation among diversity metrics in matrix **M** in Metrics_correlation element.
